@@ -7,10 +7,10 @@ The project was inspired by a desire to identify the changes in oil consumption 
 Data derives from [Kaggle](https://www.kaggle.com/datasets/muhammadroshaanriaz/oil-reserves-and-consumption-from-1995-to-2022)  It's packed with insights on per year oil consumption, countries, location, and overall consumption per continent.
 
 ### The questions I wanted to answer through my analysis were:
-1. Total Oil Consumption by Country/Region
-2. Annual Oil Consumption by Country/Region
+1. Total Oil Consumption by Country/Region (Last 10 years)
+2. Annual Oil Consumption by Country/Region (Last 10 years)
 3. Year-over-Year Change
 4. Trend Analysis
-5. egional Comparisons
+5. Regional Comparisons
 6. Growth Rate
 
