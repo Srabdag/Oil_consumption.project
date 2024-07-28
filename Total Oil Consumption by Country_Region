@@ -1,6 +1,6 @@
 /*
 Question: Total Oil Consumption by Country/Region
-- Identify the top 10 counsumption of oil per country/region 
+- Identify the last 10 years of counsumption of oil per country/region 
 - Focuses  only raw values (remove nulls)
 */
 
