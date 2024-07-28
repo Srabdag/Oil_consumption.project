@@ -1,0 +1,112 @@
+/*
+Question: Total Oil Consumption by Country/Region
+- Identify the top 10 counsumption of oil per country/region 
+- Focuses  only raw values (remove nulls)
+*/
+
+
+SELECT 
+      Country_continent, 
+      SUM(year_2010 + year_2011 + year_2012 + year_2013 + year_2014 +
+           year_2015 + year_2016 + year_2017 + year_2018 + year_2019 +
+           year_2020 + year_2021 + year_2022 + year_2023) AS total_consumption
+FROM 
+      oil_consumption
+WHERE 
+      year_2010 AND year_2011 AND year_2012 AND year_2013 AND year_2014 AND 
+           year_2015 AND year_2016 AND year_2017 AND year_2018 AND year_2019 +
+           year_2020 AND year_2021 AND year_2022 AND year_2023 IS NOT NULL 
+GROUP BY 
+      Country_continent;
+
+
+-- Here is the breakdown 
+'Africa','30487.92209999999'
+'Africa (EI)','30487.922'
+'Algeria','3067.8816600000005'
+'Argentina','5044.33196'
+'Asia','320027.973'
+'Asia Pacific (EI)','255304.075'
+'Australia','7963.32381'
+'Austria','2009.3872400000002'
+'Belgium','4843.45036'
+'Brazil','19235.788399999998'
+'Bulgaria','742.232211'
+'CIS (EI)','32588.271499999995'
+'Canada','17435.874'
+'Central America (EI)','3387.14444'
+'Chile','2836.3617299999996'
+'China','97769.06799999998'
+'Colombia','2914.95473'
+'Cyprus','413.704951'
+'Czechia','1531.4806559999997'
+'Denmark','1236.9741159999999'
+'Eastern Africa (EI)','4487.17136'
+'Ecuador','1915.7664679999998'
+'Egypt','5874.07881'
+'Europe','134009.16150000002'
+'Europe (EI)','114092.9085'
+'European Union (27)','87821.9794'
+'Finland','1496.5652750000004'
+'France','12183.77369'
+'Germany','17764.669'
+'Greece','2428.88464'
+'High-income countries','378831.66000000003'
+'Hong Kong','2842.72319'
+'Hungary','1206.032231'
+'Iceland','135.3838202'
+'India','33790.1426'
+'Indonesia','11701.42722'
+'Iran','13157.97812'
+'Iraq','5554.84577'
+'Ireland','1167.814688'
+'Israel','1721.4462700000001'
+'Italy','10019.92591'
+'Japan','31360.3413'
+'Kuwait','3235.37232'
+'Lower-middle-income countries','73501.53719999999'
+'Luxembourg','446.81891300000007'
+'Malaysia','5818.7559200000005'
+'Mexico','15071.34665'
+'Middle Africa (EI)','2012.2125240000003'
+'Middle East (EI)','65310.57779999999'
+'Morocco','2128.5940299999997'
+'Netherlands','7161.314940000001'
+'New Zealand','1255.0704660000001'
+'Non-OECD (EI)','371960.184'
+'North America','175489.356'
+'North America (EI)','170197.3705'
+'Norway','1571.6290020000001'
+'OECD (EI)','344553.086'
+'Oceania','9218.394409999999'
+'Oman','1485.2448879999997'
+'Pakistan','3773.323400000001'
+'Peru','1743.4763549999998'
+'Philippines','3019.1956299999997'
+'Poland','4722.48664'
+'Portugal','1839.4418800000003'
+'Qatar','1960.940024'
+'Romania','1573.74426'
+'Singapore','10645.55232'
+'Slovakia','641.91168'
+'South Africa','4388.498079999999'
+'South America','39853.01039999999'
+'South Korea','19806.5803'
+'South and Central America (EI)','48532.14429999999'
+'Spain','9904.2066'
+'Sri Lanka','913.3497369999999'
+'Sweden','2132.52375'
+'Switzerland','1732.950906'
+'Taiwan','7314.66619'
+'Thailand','8496.83713'
+'Trinidad and Tobago','311.91149900000005'
+'Turkey','7099.59203'
+'United Arab Emirates','6942.695860000001'
+'United Kingdom','11404.4131'
+'United States','137690.148'
+'Upper-middle-income countries','223358.05'
+'Venezuela','4504.74455'
+'Vietnam','3738.67631'
+'Western Africa (EI)','5426.12116'
+'World','716513.2679999999'
+
