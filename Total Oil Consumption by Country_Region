@@ -14,7 +14,7 @@ FROM
       oil_consumption
 WHERE 
       year_2010 AND year_2011 AND year_2012 AND year_2013 AND year_2014 AND 
-           year_2015 AND year_2016 AND year_2017 AND year_2018 AND year_2019 +
+           year_2015 AND year_2016 AND year_2017 AND year_2018 AND year_2019 AND
            year_2020 AND year_2021 AND year_2022 AND year_2023 IS NOT NULL 
 GROUP BY 
       Country_continent;
