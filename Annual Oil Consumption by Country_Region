@@ -1,0 +1,16 @@
+/*
+-- You can use different solutions to find the annual oil consumption for example: --
+ 1. To get the oil consumption for each country or region for a specific year (e.g., 2012)
+ 2. To get the oil consumption for each country or region for multiple years (e.g., from 2010 to 2020)
+ 3. To get the oil consumption for a specific country or region (e.g., "Asia") for all years
+*/
+
+
+Solution 1.
+
+SELECT 
+    countries_continent, 
+    year_2012
+FROM
+    oil_consumption;
+
