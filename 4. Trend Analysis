@@ -1,0 +1,64 @@
+/*
+Question: Trend Analysis 
+- We will be usimg SQL, CSV file and Python here to vusalise thre trend of Year-to-Year (YoY)
+1.Calculate Year-over-Year Change
+2.Analyze Trends
+3.Visualise the Data
+
+*/
+
+1. Calculate Year-over-Year Change (will use example from the lasy 10 years)
+SELECT 
+    country_continent,
+    year_2010 - year_2009 AS change_2010,
+    year_2011 - year_2010 AS change_2011,
+    year_2012 - year_2011 AS change_2012,
+    year_2013 - year_2012 AS change_2013,
+    year_2014 - year_2013 AS change_2014,
+    year_2015 - year_2014 AS change_2015,
+    year_2016 - year_2015 AS change_2016,
+    year_2017 - year_2016 AS change_2017,
+    year_2018 - year_2017 AS change_2018,
+    year_2019 - year_2018 AS change_2019,
+    year_2020 - year_2019 AS change_2020,
+    year_2021 - year_2020 AS change_2021,
+    year_2022 - year_2021 AS change_2022,
+    year_2023 - year_2022 AS change_2023
+FROM oil_consumption;
+
+
+2.Analyze Trends
+-- Continue for all the years
+SELECT country_continent, 
+       '2023' AS year, (year_2023 - year_2022) / year_2022 * 100 AS yoy_change
+FROM oil_consumption;
+
+
+3.Visualise the Data using Python 
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# exported the SQL results to a CSV file
+file_path = '/path/to/yoy_change_data.csv'
+df = pd.read_csv(file_path)
+
+# Plot the data
+plt.figure(figsize=(14, 8))
+
+for country in df['country_continent'].unique():
+    country_data = df[df['country_continent'] == country]
+    plt.plot(country_data['year'], country_data['yoy_change'], label=country)
+
+plt.xlabel('Year')
+plt.ylabel('YoY Change (%)')
+plt.title('Year-over-Year Change in Oil Consumption by Country/Region')
+plt.legend(loc='best')
+plt.grid(True)
+plt.show()
+
+This script creates a line plot showing the YoY change in oil consumption for different regions over the years.
+
+
+
+
+
