@@ -10,7 +10,7 @@ Data derives from [Kaggle](https://www.kaggle.com/datasets/muhammadroshaanriaz/o
 1. Total Oil Consumption by Country/Region (COMPLETED)
 2. Annual Oil Consumption by Country/Region (COMPLETED)
 3. Year-over-Year Change (COMPLETED)
-4. Trend Analysis
+4. Trend Analysis (COMPLETED)
 5. Regional Comparisons
 6. Growth Rate
 
