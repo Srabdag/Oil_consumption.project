@@ -1,0 +1,56 @@
+/*
+Quention: Region comparions throughout each decacde 
+1. Visualise and analyse the year-to-year(YoY) changes in oil consumption across different regions
+2. Create a comparative plot for each region over the specified years.
+3. Use regions (Europe, Asia, Africa)
+*/
+
+Solution: 
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Extended data representing YoY change in oil consumption
+data = {
+    'country_continent': [
+        'Africa', 'Africa', 'Africa', 'Africa', 'Africa', 'Africa', 
+        'Africa', 'Africa', 'Africa', 'Africa',
+        'Asia', 'Asia', 'Asia', 'Asia', 'Asia', 'Asia',
+        'Asia', 'Asia', 'Asia', 'Asia',
+        'Europe', 'Europe', 'Europe', 'Europe', 'Europe', 'Europe',
+        'Europe', 'Europe', 'Europe', 'Europe'
+    ],
+    'year': [
+        '1966', '1967', '1968', '1969', '1970', '1971', 
+        '1972', '1973', '1974', '1975',
+        '1966', '1967', '1968', '1969', '1970', '1971', 
+        '1972', '1973', '1974', '1975',
+        '1966', '1967', '1968', '1969', '1970', '1971', 
+        '1972', '1973', '1974', '1975'
+    ],
+    'yoy_change': [
+        5.1, 3.2, 4.0, 2.5, 3.6, 3.8, 
+        4.1, 4.3, 4.0, 3.9,
+        6.1, 5.2, 4.8, 4.5, 5.0, 5.3, 
+        5.4, 5.6, 5.8, 6.0,
+        3.5, 3.0, 2.8, 3.1, 2.9, 3.2, 
+        3.3, 3.4, 3.6, 3.7
+    ]
+}
+
+# Create DataFrame from the data
+df = pd.DataFrame(data)
+
+# Input the YoY change
+plt.figure(figsize=(14, 8))
+
+for country in df['country_continent'].unique():
+    country_data = df[df['country_continent'] == country]
+    plt.plot(country_data['year'], country_data['yoy_change'], marker='o', label=country)
+
+plt.xlabel('Year')
+plt.ylabel('YoY Change (%)')
+plt.title('Year-over-Year Change in Oil Consumption by Region')
+plt.legend(loc='best')
+plt.grid(True)
+plt.show()
