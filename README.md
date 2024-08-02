@@ -12,6 +12,6 @@ Data derives from [Kaggle](https://www.kaggle.com/datasets/muhammadroshaanriaz/o
 3. Year-over-Year Change (COMPLETED)
 4. Trend Analysis (COMPLETED)
 5. Regional Comparisons (COMPLETED)
-6. Growth Rate
+6. Growth Rate (COMPLETED)
 
 IN PROGRESS>>>>
