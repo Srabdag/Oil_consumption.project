@@ -1,0 +1,36 @@
+/*
+Question: Calualate the Growth Rate (Country to region)
+1. Use CSV file to create a table in python 
+2. make sure to have the right libabry such as pandas and matplotlib
+*/
+
+
+Solution: 
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load CSV file
+file_path = 'oil_consumption.csv' 
+# Correct path checked 
+df = pd.read_csv(file_path)
+
+# Calculate Year-over-Year growth rate
+df['growth_rate'] = df.groupby('country_continent')['consumption'].pct_change() * 100
+
+# Drop rows where growth rate is (first year for each group)
+df = df.dropna(subset=['growth_rate'])
+
+# Dsitrubite the growth rate
+plt.figure(figsize=(14, 8))
+
+for country in df['country_continent'].unique():
+    country_data = df[df['country_continent'] == country]
+    plt.plot(country_data['year'], country_data['growth_rate'], marker='o', label=country)
+
+plt.xlabel('Year')
+plt.ylabel('Growth Rate (%)')
+plt.title('Year-over-Year Growth Rate in Oil Consumption by Region')
+plt.legend(loc='best')
+plt.grid(True)
+plt.show()
