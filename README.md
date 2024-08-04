@@ -24,3 +24,5 @@ For my deep dive into the data analyst oil consumption, I used the power of seve
 
 # The Analysis
 Each query for this project aimed at investigating specific aspects of the data analyst of oil consuption across Countries/Region. Here’s how I approached each question:
+
+IN PROGRESS>>>
