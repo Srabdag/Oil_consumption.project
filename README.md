@@ -1,5 +1,5 @@
 # Introduction
-✅ Dive into the oil consumption! Focusing on each country across the world, 🌍 this project explores the highest to lowest consumption of oil from each country, 📊 the extraction of complex data, 📈 and where different countries have different consumption rates for oil.
+🛢️ Dive into the oil consumption! Focusing on each country across the world, 🌍 this project explores the highest to lowest consumption of oil from each country, 📊 the extraction of complex data, 📈 and where different countries have different consumption rates for oil.
 
 # Background
 The project was inspired by a desire to identify the changes in oil consumption by country and by year, with the goal of better navigating the oil consumption market.
